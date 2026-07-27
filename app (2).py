@@ -10,7 +10,6 @@ Score""")
 
 #==================AGENT CODE================
 # Step 2: Load Modules
-import IPython as ip
 import os
 import time
 import langchain
@@ -29,6 +28,8 @@ from langchain_community.document_loaders import PyMuPDFLoader
 GOOGLE_API_KEY = st.sidebar.text_input("GOOGLE_API_KEY",type="password")
 GROQ_API_KEY = st.sidebar.text_input("GROQ_API_KEY",type="password")
 TAVILY_API_KEY = st.sidebar.text_input("TAVILY_API_KEY",type="password")
+
+
 
 #==========MODEL BUILDING===============
 model = ChatGoogleGenerativeAI(
