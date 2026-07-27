@@ -29,8 +29,6 @@ GOOGLE_API_KEY = st.sidebar.text_input("GOOGLE_API_KEY",type="password")
 GROQ_API_KEY = st.sidebar.text_input("GROQ_API_KEY",type="password")
 TAVILY_API_KEY = st.sidebar.text_input("TAVILY_API_KEY",type="password")
 
-
-
 #==========MODEL BUILDING===============
 model = ChatGoogleGenerativeAI(
     model = 'gemini-3.5-flash-lite',
