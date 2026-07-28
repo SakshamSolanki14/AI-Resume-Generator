@@ -108,7 +108,30 @@ IMPORTANT: wherever the profile photo goes in the resume, output exactly this ta
 do not draw or generate any other image tag or placeholder circle yourself """
 final_prompt=prompt+resume()
 USER_INFO=st.text_input("ENTER YOUR INFORMATION")
-user_details=f"""user details:given beow :resume info {USER_INFO} DEFAULT IF NOT GIVEN : PYTHON DEVELOPER RESUME """
+user_details=f"""user details:given beow :resume info {USER_INFO} DEFAULT IF NOT GIVEN : PYTHON DEVELOPER RESUME 
+Give Python Developer Resume
+Saksham Solanki
+City: New Delhi
+State: Delhi
+number: +91 8448660717
+email_id: saksham.14solanki@gmail.com
+**Professional Summary**
+**Professional Summary**
+
+Motivated and detail-oriented Bachelor of Computer Applications (BCA) student at IINTM Janakpuri with a strong foundation in programming, database management, and web technologies. Passionate about learning emerging technologies and applying technical knowledge to solve real-world problems. Possesses good analytical, problem-solving, and communication skills, with the ability to work effectively both independently and as part of a team. Eager to gain practical experience through internships and contribute to organizational growth while continuously enhancing technical and professional skills.
+
+
+**Technical Skills**
+
+* **Programming Languages:** C, C++, Java, Python (Basic)
+* **Web Technologies:** HTML5, CSS3, JavaScript, Bootstrap
+* **Database Management:** MySQL, SQL
+* **Development Tools:** Visual Studio Code, Eclipse, NetBeans
+* **Version Control:** Git, GitHub (Basic)
+* **Operating Systems:** Windows, Linux (Basic)
+* **Microsoft Office:** Word, Excel, PowerPoint
+* **Core Concepts:** Object-Oriented Programming (OOP), Data Structures, Database Management System (DBMS), Operating Systems, Computer Networks
+"""
 query = final_prompt+user_details
 
 import base64
