@@ -106,7 +106,7 @@ prompt="""you are a helpful ai assistant  with a job resume maker , your task is
 IMPORTANT: wherever the profile photo goes in the resume, output exactly this tag and nothing else:
 <img src="PROFILE_IMAGE_PLACEHOLDER" style="width:100px;height:100px;border-radius:50%;">
 do not draw or generate any other image tag or placeholder circle yourself
-Use different color and stylings"""
+#Use different color and stylings"""
 final_prompt=prompt+resume()
 USER_INFO=st.text_input("ENTER YOUR INFORMATION")
 user_details=f"""user details:given beow :resume info {USER_INFO} DEFAULT IF NOT GIVEN : PYTHON DEVELOPER RESUME 
