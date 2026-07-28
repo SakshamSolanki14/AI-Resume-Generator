@@ -137,6 +137,21 @@ query = final_prompt+user_details
 
 import base64
 
+OPTIONS = ["Delhi","Noida","Gurugram",
+          "Kanpur","Lucknow","Banglore","Pune"]
+LOCATIONS = st.sidebar.multiselect('SELECT LOCATIONS: ',
+                                  optons = OPTIONS)
+JOB_PROFILE = ["Python Developer","GEN AI",
+              "Full Stack Developer","Data Analyst"]
+PROFILE = st.sidebar.multiselect("SELECT JOB ROLE",
+                                options = JOB_PROFILE)
+job_prompt = f"""Based on {PROFILE} jobs in {LOCATION}, I
+want latest job news in using tavily,
+try top 10 search or whatever available
+and give result like naukri theme design with
+job name, job desc, salary,
+apply link and output must be in html no markdown"""
+
 if st.button('generate resume'):
   with st.spinner("runnign agent"):
 
@@ -153,4 +168,8 @@ if st.button('generate resume'):
       
 
     st.html(code , width="stretch" , unsafe_allow_javascript=True)
-    
+    st.divider()
+    response = agnet.invoke({'messages':[{'role':'user','content':job_prompt}]})
+
+    job_code = response['messages'][-1].content[-1]['text']
+    st.html(code , width="stretch" , unsafe_allow_javascript=True)
